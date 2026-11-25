@@ -1,0 +1,17 @@
+### Health
+GET http://127.0.0.1:8765/health
+
+### Reset
+POST http://127.0.0.1:8765/test/reset
+Authorization: Bearer qa-assessment-token
+
+### Create
+POST http://127.0.0.1:8765/orders
+Authorization: Bearer qa-assessment-token
+Content-Type: application/json
+
+{"sku":"NOTEBOOK","quantity":2,"customerEmail":"qa@example.com","requestId":"example-001"}
+
+### List created orders
+GET http://127.0.0.1:8765/orders?status=created
+Authorization: Bearer qa-assessment-token
